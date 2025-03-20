@@ -33,9 +33,19 @@ class Vip:
     
     def __str__(self) -> str:
         return f'Descuento ?: \n - {self.__descuento()}'
-
+#ejemplo de or prestamo de libro
+class EjemploOr:
+    def __str__(self):
+        DISTANCIA_PERMITIDA:int = 3
+        credencial:str = input('cuentas con credencial ? (si/no)')
+        distancia_km:int = int(input('a cuantos km vives de la biblioteca? '))
+        if credencial.strip().lower() == 'si' or distancia_km <= DISTANCIA_PERMITIDA:
+            return 'si hay prestamo'
+        else:
+            return 'no hay prestamo'
 if __name__ == '__main__':
     """nuevo_vip:object = Vip(10,True)
     print(nuevo_vip)
     """
-    pass
+    ejm:object = EjemploOr()
+    print(ejm)
